@@ -1,0 +1,52 @@
+/* Self-hosted fonts (subset: latin only) — zero runtime dependency on
+   Google Fonts / third-party CDNs.
+
+   New type system:
+   - Bricolage Grotesque (VARIABLE, weight axis 200-800) — the display face.
+     It's a variable font on purpose: the hero headline animates its own
+     font-weight as it scrolls into view (see main.js), which only a
+     variable font can do smoothly. This replaces the previous static serif.
+   - Manrope — body copy. A geometric grotesk that sits comfortably next to
+     Bricolage without competing with it.
+   - Space Mono — instrument/utility face for timecodes, indices, labels.
+*/
+
+@font-face{
+  font-family:'Bricolage Grotesque Variable';
+  font-style:normal;
+  font-weight: 200 800;
+  font-display:swap;
+  src:url('../fonts/bricolage-grotesque-latin-wght-normal.woff2') format('woff2-variations');
+}
+
+@font-face{
+  font-family:'Manrope';
+  font-style:normal; font-weight:400; font-display:swap;
+  src:url('../fonts/manrope-latin-400-normal.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Manrope';
+  font-style:normal; font-weight:500; font-display:swap;
+  src:url('../fonts/manrope-latin-500-normal.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Manrope';
+  font-style:normal; font-weight:600; font-display:swap;
+  src:url('../fonts/manrope-latin-600-normal.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Manrope';
+  font-style:normal; font-weight:700; font-display:swap;
+  src:url('../fonts/manrope-latin-700-normal.woff2') format('woff2');
+}
+
+@font-face{
+  font-family:'Space Mono';
+  font-style:normal; font-weight:400; font-display:swap;
+  src:url('../fonts/space-mono-latin-400-normal.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Space Mono';
+  font-style:normal; font-weight:700; font-display:swap;
+  src:url('../fonts/space-mono-latin-700-normal.woff2') format('woff2');
+}

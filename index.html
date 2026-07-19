@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A New Beginning — Grown, Not Manufactured</title>
+<meta name="description" content="A New Beginning: garden roses propagated by hand and documented from seed to bloom. Pre-order the first Bloom Box.">
+
+<!-- Preload the very first frame so the hero never shows an empty canvas -->
+<link rel="preload" as="image" href="assets/frames/frame_001.jpg" fetchpriority="high">
+
+<!-- Fonts and GSAP are self-hosted (css/fonts.css, js/vendor/) so the page
+     has no runtime dependency on third-party CDNs and keeps working offline
+     or behind restrictive network policies. -->
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="site-nav" data-nav>
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-line">A New</span>
+      <span class="brand-line">Beginning</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#story">Story</a>
+      <a href="#journal">Journal</a>
+      <a href="#care">Care</a>
+      <a href="#preorder" class="nav-cta">Pre-order</a>
+    </nav>
+    <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" data-mobile-menu>
+    <a href="#story">Story</a>
+    <a href="#journal">Journal</a>
+    <a href="#care">Care</a>
+    <a href="#preorder" class="nav-cta">Pre-order</a>
+  </div>
+</header>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" data-preloader aria-hidden="true">
+  <div class="preloader-inner">
+    <span class="preloader-mark">✦</span>
+    <p class="preloader-label">Calibrating timelapse</p>
+    <div class="preloader-bar"><div class="preloader-bar-fill" data-preloader-fill></div></div>
+    <p class="preloader-pct" data-preloader-pct>0%</p>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ============ HERO : SCROLL-SCRUBBED GROWTH SEQUENCE ============ -->
+  <section class="hero" id="top" data-hero>
+    <div class="hero-pin" data-hero-pin>
+
+      <!-- Canvas draws the current growth frame; scroll position selects the frame -->
+      <canvas class="hero-canvas" data-hero-canvas aria-hidden="true"></canvas>
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-topline">
+          <span class="hero-eyebrow">A field-grown timelapse</span>
+          <span class="hero-timecode" data-timecode aria-label="Elapsed growth time">T+00:00</span>
+        </div>
+
+        <!-- Vertical tick rail = the "instrument" signature, mirrors scroll progress -->
+        <div class="scrub-rail" aria-hidden="true">
+          <div class="scrub-rail-track">
+            <div class="scrub-rail-fill" data-rail-fill></div>
+          </div>
+          <span class="scrub-rail-label">SCROLL</span>
+        </div>
+
+        <div class="hero-chapters" data-chapters>
+          <article class="chapter" data-chapter data-range="0,0.16" data-h="left" data-v="bottom">
+            <p class="chapter-index">Stage 01 — Dormancy</p>
+            <h2 class="chapter-title">Every rose begins<br><em>underground.</em></h2>
+            <p class="chapter-copy">Sealed in its husk, the seed waits for warmth. Nothing about this moment looks like a flower — that's the point.</p>
+          </article>
+
+          <article class="chapter" data-chapter data-range="0.16,0.55" data-h="right" data-v="top">
+            <p class="chapter-index">Stage 02 — Emergence</p>
+            <h2 class="chapter-title">Roots first,<br><em>always.</em></h2>
+            <p class="chapter-copy">Before a single petal, the plant spends its energy underground — a structure built to outlast the bloom it will eventually grow.</p>
+          </article>
+
+          <article class="chapter" data-chapter data-range="0.55,0.75" data-h="left" data-v="top">
+            <p class="chapter-index">Stage 03 — Formation</p>
+            <h2 class="chapter-title">The bud holds<br><em>its shape.</em></h2>
+            <p class="chapter-copy">Colour arrives before the flower opens. What looks sealed shut is already fully formed, folded tight, waiting on daylight.</p>
+          </article>
+
+          <article class="chapter" data-chapter data-range="0.75,1" data-h="right" data-v="bottom">
+            <p class="chapter-index">Stage 04 — Bloom</p>
+            <h2 class="chapter-title">Ten weeks,<br><em>one flower.</em></h2>
+            <p class="chapter-copy">This is the rose we ship — grown on camera, from a single traceable seed, so you can see exactly what "fresh" means.</p>
+            <a href="#preorder" class="btn btn-ghost hero-cta">Pre-order this bloom</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="hero-scrollcue" data-scrollcue aria-hidden="true">
+        <span class="scrollcue-mouse"><span></span></span>
+        <span class="scrollcue-text">Scroll to grow</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORY / FIELD NOTES ============ -->
+  <section class="story" id="story">
+    <div class="story-grid">
+      <p class="section-eyebrow">Field notes</p>
+      <blockquote class="story-quote">
+        We don't photograph roses at the flower market.<br>
+        <em>We plant the seed and point a camera at it</em> — for ten weeks, without a single cut.
+      </blockquote>
+      <div class="story-body">
+        <p>Most "fresh" flowers have already lived a week in transit by the time they reach a doorstep. Ours haven't gone anywhere. Every Bloom Box begins as a single seed, propagated in soil we control, and documented in daily footage from germination to first colour.</p>
+        <p>What you're scrolling through above is real, unedited growth — the same footage we use to decide the exact day a stem is ready to cut. No two timelines are identical, which is the entire argument for growing your own record of one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOURNAL / STAGE GALLERY ============ -->
+  <section class="journal" id="journal">
+    <div class="journal-head">
+      <p class="section-eyebrow">The growth journal</p>
+      <h2 class="section-title">Ten weeks, in six frames.</h2>
+      <p class="section-sub">Every still below is pulled from the same uninterrupted shot — timestamped the moment it was captured.</p>
+    </div>
+    <div class="journal-strip" data-journal-strip role="list">
+      <figure class="journal-card" role="listitem">
+        <img src="assets/thumbs/seed.jpg" alt="A dormant rose seed resting just beneath the soil surface" loading="lazy" width="480" height="480">
+        <figcaption><span class="mono">T+00:00</span> Dormancy</figcaption>
+      </figure>
+      <figure class="journal-card" role="listitem">
+        <img src="assets/thumbs/sprout.jpg" alt="The husk splitting as the first shoot pushes upward" loading="lazy" width="480" height="480">
+        <figcaption><span class="mono">T+02:30</span> First shoot</figcaption>
+      </figure>
+      <figure class="journal-card" role="listitem">
+        <img src="assets/thumbs/root.jpg" alt="A young seedling with visible root structure anchored in soil" loading="lazy" width="480" height="480">
+        <figcaption><span class="mono">T+04:00</span> Root set</figcaption>
+      </figure>
+      <figure class="journal-card" role="listitem">
+        <img src="assets/thumbs/bud.jpg" alt="A tightly sealed rosebud showing the first hint of red" loading="lazy" width="480" height="480">
+        <figcaption><span class="mono">T+06:15</span> Bud forms</figcaption>
+      </figure>
+      <figure class="journal-card" role="listitem">
+        <img src="assets/thumbs/opening.jpg" alt="The rosebud beginning to unfurl its outer petals" loading="lazy" width="480" height="480">
+        <figcaption><span class="mono">T+08:00</span> Opening</figcaption>
+      </figure>
+      <figure class="journal-card" role="listitem">
+        <img src="assets/thumbs/bloom.jpg" alt="A fully bloomed deep red garden rose" loading="lazy" width="480" height="480">
+        <figcaption><span class="mono">T+10:00</span> Full bloom</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ CARE / FEATURES ============ -->
+  <section class="care" id="care">
+    <p class="section-eyebrow">Why it's different</p>
+    <div class="care-grid">
+      <article class="care-card">
+        <span class="care-index">01</span>
+        <h3>One seed, one record</h3>
+        <p>Every plant is filmed from germination, so the flower you receive has a documented history — not a supplier's word for it.</p>
+      </article>
+      <article class="care-card">
+        <span class="care-index">02</span>
+        <h3>Cut at first bloom</h3>
+        <p>Stems leave the soil within hours of opening, not days after a warehouse pickup. That difference is most of what "freshness" means.</p>
+      </article>
+      <article class="care-card">
+        <span class="care-index">03</span>
+        <h3>Grown, not flown</h3>
+        <p>Regional propagation beds keep the trip from soil to door under a day — shorter than most flowers spend in cold storage alone.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PREORDER CTA ============ -->
+  <section class="preorder" id="preorder">
+    <div class="preorder-inner">
+      <p class="section-eyebrow section-eyebrow--light">Autumn drop — limited beds</p>
+      <h2 class="preorder-title">Reserve the bloom<br><em>we're growing now.</em></h2>
+      <p class="preorder-sub">Pre-order today and we'll start your timelapse the week your bed is planted. You'll watch it grow before it ever ships.</p>
+      <form class="preorder-form" data-preorder-form>
+        <label class="sr-only" for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email">
+        <button type="submit" class="btn btn-solid">Pre-order — $58</button>
+      </form>
+      <p class="preorder-note" data-preorder-note aria-live="polite">Ships within 48 hours of first bloom. Fully refundable before your bed is planted.</p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span>A New Beginning</span>
+        <p>Garden roses, grown on camera.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#story">Story</a>
+        <a href="#journal">Journal</a>
+        <a href="#care">Care</a>
+        <a href="#preorder">Pre-order</a>
+      </nav>
+      <p class="footer-legal">© 2026 A New Beginning. All roses grown to order.</p>
+    </div>
+  </footer>
+
+</main>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
